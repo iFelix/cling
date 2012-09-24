@@ -35,7 +35,7 @@ import java.util.Collection;
  * UPnP control invocations. It's the service manager's job to translate
  * such an action invocation into an actual method invocation, or any other procedure
  * that satisfies the requirements. The {@link org.fourthline.cling.model.action.ActionExecutor}
- * works in conjuction with the manager, for example, the
+ * works in conjunction with the manager, for example, the
  * {@link org.fourthline.cling.model.action.MethodActionExecutor} expects that an action
  * method can be invoked through reflection on the instance returned by the manager's
  * {@link #getImplementation()} method. This is possible with the
