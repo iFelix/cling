@@ -41,7 +41,7 @@ import java.util.Collection;
  * <p>
  * A running UPnP stack has one <code>Registry</code>. Any discovered device is added
  * to this registry, as well as any exposed local device. The registry then maintains
- * these devices continously (see {@link RegistryMaintainer}) and when needed refreshes
+ * these devices continuously (see {@link RegistryMaintainer}) and when needed refreshes
  * their announcements on the network or removes them when they have expired. The registry
  * also keeps track of GENA event subscriptions.
  * </p>
