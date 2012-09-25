@@ -10,6 +10,9 @@ public class SwitchPower {
 
     @UpnpStateVariable(defaultValue = "0", sendEvents = false)
     private boolean target = false;
+    
+    @UpnpStateVariable(defaultValue = "0", sendEvents = false)
+    private boolean myTarget = false;
 
     @UpnpStateVariable(defaultValue = "0")
     private boolean status = false;
@@ -20,6 +23,14 @@ public class SwitchPower {
         target = newTargetValue;
         status = newTargetValue;
         System.out.println("Switch is: " + status);
+    }
+    
+    @UpnpAction
+    public void setMyTarget(@UpnpInputArgument(name = "NewMyTargetValue")
+                          boolean newTargetValue) {
+        target = newTargetValue;
+        status = newTargetValue;
+        System.out.println("The Switch is: " + status);
     }
 
     @UpnpAction(out = @UpnpOutputArgument(name = "RetTargetValue"))
