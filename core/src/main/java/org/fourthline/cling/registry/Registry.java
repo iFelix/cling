@@ -390,7 +390,7 @@ public interface Registry {
     public void removeRemoteSubscription(RemoteGENASubscription subscription);
 
     /**
-     * Called internally by the UPnP stack, during GENA protocol excution.
+     * Called internally by the UPnP stack, during GENA protocol execution.
      * <p>
      * When subscribing with a remote host, the remote host might send the
      * initial event message faster than the response for the subscription

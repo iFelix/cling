@@ -71,7 +71,7 @@ public class RouterImpl implements Router {
     /**
      * Creates a {@link org.fourthline.cling.transport.spi.NetworkAddressFactory} from the given
      * {@link org.fourthline.cling.UpnpServiceConfiguration} and initializes listening services. First an instance
-     * of {@link org.fourthline.cling.transport.spi.MulticastReceiver} is bound to eatch network interface. Then
+     * of {@link org.fourthline.cling.transport.spi.MulticastReceiver} is bound to each network interface. Then
      * an instance of {@link org.fourthline.cling.transport.spi.DatagramIO}
      * and {@link org.fourthline.cling.transport.spi.StreamServer} is bound to each bind address
      * returned by the network address factory, respectively. There is only one instance of
