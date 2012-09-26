@@ -131,6 +131,7 @@ public class ProtocolFactoryImpl implements ProtocolFactory {
         return false;
     }
 
+    // Dispatch the request stream message to the matching protocol
     public ReceivingSync createReceivingSync(StreamRequestMessage message) throws ProtocolCreationException {
         log.fine("Creating protocol for incoming synchronous: " + message);
 

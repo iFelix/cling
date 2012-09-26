@@ -30,7 +30,7 @@ import static org.testng.Assert.assertEquals;
  * Invoking an action
  * <p>
  * UPnP services expose state variables and actions. While the state variables represent the
- * current state of the service, actions are the operations used to query or maniuplate the
+ * current state of the service, actions are the operations used to query or manipulate the
  * service's state. You have to obtain a <code>Service</code> instance from a
  * <code>Device</code> to access any <code>Action</code>. The target device can be local
  * to the same UPnP stack as your control point, or it can be remote of another device anywhere
@@ -43,7 +43,7 @@ import static org.testng.Assert.assertEquals;
  * <a class="citation" href="javacode://this#invokeActions(LocalDevice)" id="ai_findservice" style="include: FINDSERVICE"/>
  * <p>
  * This method will search the device and all its embedded devices for a service with the given
- * identififer and returns either the found <code>Service</code> or <code>null</code>. The Cling
+ * Identifier and returns either the found <code>Service</code> or <code>null</code>. The Cling
  * metamodel is thread-safe, so you can share an instance of <code>Service</code> or
  * <code>Action</code> and access it concurrently.
  * </p>

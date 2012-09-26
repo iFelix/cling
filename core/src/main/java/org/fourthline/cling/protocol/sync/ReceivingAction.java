@@ -122,6 +122,7 @@ public class ReceivingAction extends ReceivingSync<StreamRequestMessage, StreamR
             log.fine("Reading body of request message");
             getUpnpService().getConfiguration().getSoapActionProcessor().readBody(requestMessage, invocation);
 
+            // Execute the action bounded at the service when initializing
             log.fine("Executing on local service: " + invocation);
             resource.getModel().getExecutor(invocation.getAction()).execute(invocation);
 

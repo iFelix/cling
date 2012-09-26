@@ -26,7 +26,7 @@ public class SwitchPower {
     }
     
     @UpnpAction
-    public void setMyTarget(@UpnpInputArgument(name = "NewMyTargetValue")
+    public void setMyTarget(@UpnpInputArgument(name = "NewMyNewTargetValue")
                           boolean newTargetValue) {
         target = newTargetValue;
         status = newTargetValue;
