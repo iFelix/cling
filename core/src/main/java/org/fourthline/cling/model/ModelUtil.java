@@ -19,6 +19,7 @@ package org.fourthline.cling.model;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Set;
@@ -62,6 +63,31 @@ public class ModelUtil {
         ANDROID_EMULATOR = foundEmulator;
     }
 
+    /**
+     * True if this class is executing on an Android TV or STB runtime, with Ethernet enabled.
+     */
+    final public static boolean ANDROID_TV;
+    static {
+        boolean foundTv = false;
+        try {
+            if (ANDROID_RUNTIME && hasEthernetInterface())
+                foundTv = true;
+        } catch (Exception ex) {
+            // Ignore
+        }
+        ANDROID_TV = foundTv;
+    }
+    
+    private static boolean hasEthernetInterface() throws SocketException {
+		Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
+		while (interfaces.hasMoreElements()) {
+			NetworkInterface iface = interfaces.nextElement();
+			if (iface.getName().toLowerCase().startsWith("eth"))
+				return true;
+		}
+		return false;
+	}
+    
     /**
      * @param stringConvertibleTypes A collection of interfaces.
      * @param clazz An interface to test.

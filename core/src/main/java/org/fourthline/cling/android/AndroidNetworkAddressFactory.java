@@ -148,7 +148,7 @@ public class AndroidNetworkAddressFactory implements NetworkAddressFactory {
     // Code from: http://www.gubatron.com/blog/2010/09/19/android-programming-how-to-obtain-the-wifis-corresponding-networkinterface/
 
     public static NetworkInterface getWifiNetworkInterface(WifiManager manager) {
-        if (ModelUtil.ANDROID_EMULATOR) {
+        if (ModelUtil.ANDROID_EMULATOR || ModelUtil.ANDROID_TV) {
             return getEmulatorWifiNetworkInterface(manager);
         }
         return getRealWifiNetworkInterface(manager);
